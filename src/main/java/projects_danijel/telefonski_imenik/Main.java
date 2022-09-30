@@ -11,9 +11,17 @@ public class Main {
         while(placeHolder) {
             ContactMenu.mainMenu();
             Scanner scanner = new Scanner(System.in);
-            int i = scanner.nextInt();
+            String input = scanner.next();
+
+            while (!(input.matches("[0-9]+"))) {
+                System.out.print("Krivi unos. Molimo upišite valjani broj.");
+                System.out.println("");
+                input = scanner.next();
+            }
+            int inputInt = Integer.parseInt(input);
+
             System.out.println("");
-            switch (i) {
+            switch (inputInt) {
                 case (1):
                     var contactReport = new ContactReport(contactsArray);
                     contactReport.print();
