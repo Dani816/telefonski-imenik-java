@@ -7,7 +7,15 @@ public class ContactAdd {
         var contact = new Contact();
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Novi kontakt\nOIB: ");
+        System.out.print("Novi kontakt\nTelefon: ");
+        String telefon = scanner.next();
+        while (!(telefon.matches("[0-9]+"))) {
+            System.out.print("Krivi unos. Molimo upišite 11 brojeva.\nOIB: ");
+            telefon = scanner.next();
+        }
+        contact.setTelefon(telefon);
+
+        System.out.print("OIB: ");
         String oib = scanner.next();
         while (!(oib.matches("[0-9]+") && oib.length()==11)) {
             System.out.print("Krivi unos. Molimo upišite 11 brojeva.\nOIB: ");

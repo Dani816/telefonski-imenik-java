@@ -17,7 +17,8 @@ public class ContactSearchOrDelete {
         String kljuc = scanner.nextLine();
 
         for (Contact list : contactsArray) {
-            if (list.getOib().equals(kljuc) ||
+            if (list.getTelefon().equals(kljuc) ||
+                    list.getOib().equals(kljuc) ||
                     list.getIme().equals(kljuc) ||
                     list.getPrezime().equals(kljuc) ||
                     list.getAdresa().equals(kljuc) ||
@@ -40,8 +41,6 @@ public class ContactSearchOrDelete {
             System.out.println("Molimo vas unesite važeći broj zapisa.");
             key = scanner.nextInt()-1;
         }
-        System.out.println("OVO JE KEYYYYY" + key);
-        System.out.println("ovo je size:" +contactsArray.size());
         contactsArray.remove(key);
     }
 }

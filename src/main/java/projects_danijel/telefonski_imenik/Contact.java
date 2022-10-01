@@ -1,13 +1,15 @@
 package projects_danijel.telefonski_imenik;
 
 public class Contact {
+    private String telefon;
     private String oib;
     private String ime;
     private String prezime;
     private String adresa;
     private String grad;
 
-    public Contact(String oib, String ime, String prezime, String adresa, String grad) {
+    public Contact(String telefon, String oib, String ime, String prezime, String adresa, String grad) {
+        this.telefon = telefon;
         this.oib = oib;
         this.ime = ime;
         this.prezime = prezime;
@@ -20,9 +22,12 @@ public class Contact {
 
     @Override
     public String toString() {
-        return (oib+ "    "+ ime+ "    " + prezime+ "    " +adresa+ "    " +grad);
+        return (telefon +"    "+ oib+ "    "+ ime+ "    " + prezime+ "    " +adresa+ "    " +grad);
     }
 
+    public String getTelefon() { return telefon; }
+
+    public void setTelefon(String telefon) { this.telefon = telefon; }
 
     public String getOib() {
         return oib;

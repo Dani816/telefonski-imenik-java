@@ -7,7 +7,7 @@ public class databaseConnector {
             try{
                 Class.forName("com.mysql.jdbc.Driver");
                 Connection con=DriverManager.getConnection(
-                        "jdbc:mysql://localhost:3306/my_local_instance","root","6stranicaknjige");
+                        "jdbc:mysql://localhost:3306/my_local_instance","root","root");
                 Statement stmt=con.createStatement();
                 ResultSet rs=stmt.executeQuery("select * from contats");
                 while(rs.next())
