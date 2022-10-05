@@ -17,12 +17,12 @@ public class ContactSearchOrDelete {
         String kljuc = scanner.nextLine();
 
         for (Contact list : contactsArray) {
-            if (list.getTelefon().equals(kljuc) ||
-                    list.getOib().equals(kljuc) ||
-                    list.getIme().equals(kljuc) ||
-                    list.getPrezime().equals(kljuc) ||
-                    list.getAdresa().equals(kljuc) ||
-                    list.getGrad().equals(kljuc)) {
+            if (list.getTelefon().equalsIgnoreCase(kljuc) ||
+                    list.getOib().equalsIgnoreCase(kljuc) ||
+                    list.getIme().equalsIgnoreCase(kljuc) ||
+                    list.getPrezime().equalsIgnoreCase(kljuc) ||
+                    list.getAdresa().equalsIgnoreCase(kljuc) ||
+                    list.getGrad().equalsIgnoreCase(kljuc)) {
 
                 System.out.println(list);
             }
